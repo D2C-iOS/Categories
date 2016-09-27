@@ -11,18 +11,39 @@
 
 #import "Macros_Color.h"
 
+#import "NSObject+SwiizzleMethod.h"
+
+
 @implementation UITextView (Placeholder)
 
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self swizzleMethod:@selector(setFont:) swizzledSelector:@selector(placeholder_setFont:)];
+    });
+}
 
-
+#pragma mark - AOP
+- (void)placeholder_setFont:(UIFont *)font {
+    [self placeholder_setFont:font];
+    self.placeholderLabel.font = font;
+}
 
 #pragma mark - Set
 - (void)setPlaceholder:(NSString *)placeholder {
+    UILabel *label = self.placeholderLabel;
+    if (!label) {
+        label = [[UILabel alloc] init];
+        label.font = self.font;
+        label.textColor = ColorWhite(186);
+        [self addSubview:label];
+        self.placeholderLabel = label;
+    }
     self.placeholderLabel.text = placeholder;
 }
 
-- (void)setFont:(UIFont *)font {
-    self.placeholderLabel.font = font;
+- (void)setPlaceholderLabel:(UILabel *)placeholderLabel {
+    objc_setAssociatedObject(self, @selector(placeholderLabel), placeholderLabel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark - Get
@@ -31,15 +52,7 @@
 }
 
 - (UILabel *)placeholderLabel {
-    UILabel *label = objc_getAssociatedObject(self, _cmd);
-    if (!label) {
-        label = [[UILabel alloc] init];
-        label.font = self.font;
-        label.textColor = ColorWhite(186);
-        [self addSubview:label];
-        objc_setAssociatedObject(self, _cmd, label, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    return label;
+    return objc_getAssociatedObject(self, @selector(placeholderLabel));
 }
 
 @end
