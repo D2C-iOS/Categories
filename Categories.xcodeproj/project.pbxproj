@@ -197,9 +197,9 @@
 		6E5F5F2F1D9A4AE100B2D630 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
 				6E5F5F451D9A614300B2D630 /* UINavigationController */,
 				6E5F5F401D9A551900B2D630 /* UITextView */,
-				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
 				6E5F5F301D9A4BE700B2D630 /* UIView */,
 			);
 			path = UIKit;
