@@ -42,6 +42,8 @@
 		B2CCE1861D9A67E700975DE9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1801D9A67E700975DE9 /* NSString+MD5.m */; };
 		B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1811D9A67E700975DE9 /* NSString+RMB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2CCE1881D9A67E700975DE9 /* NSString+RMB.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1821D9A67E700975DE9 /* NSString+RMB.m */; };
+		B2CCE18F1D9A6D8800975DE9 /* NSString+CreateDate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE18D1D9A6D8800975DE9 /* NSString+CreateDate.h */; };
+		B2CCE1901D9A6D8800975DE9 /* NSString+CreateDate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE18E1D9A6D8800975DE9 /* NSString+CreateDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		B2CCE1801D9A67E700975DE9 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		B2CCE1811D9A67E700975DE9 /* NSString+RMB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RMB.h"; sourceTree = "<group>"; };
 		B2CCE1821D9A67E700975DE9 /* NSString+RMB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RMB.m"; sourceTree = "<group>"; };
+		B2CCE18D1D9A6D8800975DE9 /* NSString+CreateDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CreateDate.h"; sourceTree = "<group>"; };
+		B2CCE18E1D9A6D8800975DE9 /* NSString+CreateDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CreateDate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,8 @@
 		B2CCE17C1D9A67E700975DE9 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCE18D1D9A6D8800975DE9 /* NSString+CreateDate.h */,
+				B2CCE18E1D9A6D8800975DE9 /* NSString+CreateDate.m */,
 				B2CCE17D1D9A67E700975DE9 /* NSString+CGSize.h */,
 				B2CCE17E1D9A67E700975DE9 /* NSString+CGSize.m */,
 				B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */,
@@ -285,6 +291,7 @@
 				6E5F5F551D9A6F7500B2D630 /* Macros_Color.h in Headers */,
 				6E5F5F541D9A6F7500B2D630 /* Macros.h in Headers */,
 				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
+				B2CCE18F1D9A6D8800975DE9 /* NSString+CreateDate.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
 				6E5F5F4C1D9A62DF00B2D630 /* UIView+Capture.h in Headers */,
 				B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */,
@@ -408,6 +415,7 @@
 				B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */,
 				B2CCE1861D9A67E700975DE9 /* NSString+MD5.m in Sources */,
 				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
+				B2CCE1901D9A6D8800975DE9 /* NSString+CreateDate.m in Sources */,
 				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
 				B2CCE1841D9A67E700975DE9 /* NSString+CGSize.m in Sources */,
 				6E5F5F491D9A615900B2D630 /* UINavigationController+PushFrame.m in Sources */,
