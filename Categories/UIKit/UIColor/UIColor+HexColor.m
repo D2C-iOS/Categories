@@ -16,7 +16,7 @@
     if (nil != hexColorStr)
     {
         NSScanner *scanner = [NSScanner scannerWithString:hexColorStr];
-        (void) [scanner scanHexInt:&colorCode];
+        [scanner scanHexInt:&colorCode];
         redByte = (unsigned char) (colorCode >> 16);
         greenByte = (unsigned char) (colorCode >> 8);
         blueByte = (unsigned char) (colorCode);
@@ -29,6 +29,5 @@
     else {
         return nil;
     }
-
 }
 @end
