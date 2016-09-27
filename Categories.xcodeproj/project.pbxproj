@@ -16,6 +16,9 @@
 		6E5F5F251D9A0B4E00B2D630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5F5F231D9A0B4E00B2D630 /* LaunchScreen.storyboard */; };
 		6E5F5F341D9A4C2D00B2D630 /* UIView+Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F321D9A4C2D00B2D630 /* UIView+Frame.h */; };
 		6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F331D9A4C2D00B2D630 /* UIView+Frame.m */; };
+		6E5F5F3E1D9A521C00B2D630 /* ESCategories.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */; };
+		6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */; };
+		6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		6E5F5F3A1D9A4E9700B2D630 /* Macros_Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Color.h; sourceTree = "<group>"; };
 		6E5F5F3B1D9A4F2200B2D630 /* Macros_Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Font.h; sourceTree = "<group>"; };
 		6E5F5F3C1D9A4F4B00B2D630 /* Macros_Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Size.h; sourceTree = "<group>"; };
+		6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESCategories.podspec; sourceTree = "<group>"; };
+		6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		6E5F5EFA1D9A0B4400B2D630 = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */,
 				6E5F5F061D9A0B4400B2D630 /* Categories */,
 				6E5F5F141D9A0B4E00B2D630 /* Categories Demo */,
 				6E5F5F051D9A0B4400B2D630 /* Products */,
@@ -124,6 +131,7 @@
 		6E5F5F2F1D9A4AE100B2D630 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F401D9A551900B2D630 /* UITextView */,
 				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
 				6E5F5F301D9A4BE700B2D630 /* UIView */,
 			);
@@ -151,6 +159,15 @@
 			path = Macros;
 			sourceTree = "<group>";
 		};
+		6E5F5F401D9A551900B2D630 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */,
+				6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -158,6 +175,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
 				6E5F5F341D9A4C2D00B2D630 /* UIView+Frame.h in Headers */,
 			);
@@ -245,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5F5F3E1D9A521C00B2D630 /* ESCategories.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */,
+				6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
