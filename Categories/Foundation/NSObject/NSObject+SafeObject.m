@@ -10,7 +10,7 @@
 
 @implementation NSObject (SafeObject)
 
-- (id)safeObjectIndex:(NSInteger)index{
+- (id)safeObjectIndex:(NSInteger)index {
     
     if (self != nil) {
         if ([self isKindOfClass:[NSArray class]] || [self isKindOfClass:[NSMutableArray class]]) {

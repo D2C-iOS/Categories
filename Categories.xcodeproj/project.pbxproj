@@ -27,6 +27,12 @@
 		B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */; };
 		B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */; };
 		B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */; };
+		B2CCE1831D9A67E700975DE9 /* NSString+CGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE17D1D9A67E700975DE9 /* NSString+CGSize.h */; };
+		B2CCE1841D9A67E700975DE9 /* NSString+CGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE17E1D9A67E700975DE9 /* NSString+CGSize.m */; };
+		B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */; };
+		B2CCE1861D9A67E700975DE9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1801D9A67E700975DE9 /* NSString+MD5.m */; };
+		B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1811D9A67E700975DE9 /* NSString+RMB.h */; };
+		B2CCE1881D9A67E700975DE9 /* NSString+RMB.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1821D9A67E700975DE9 /* NSString+RMB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeObject.m"; sourceTree = "<group>"; };
 		B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwiizzleMethod.h"; sourceTree = "<group>"; };
 		B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwiizzleMethod.m"; sourceTree = "<group>"; };
+		B2CCE17D1D9A67E700975DE9 /* NSString+CGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CGSize.h"; sourceTree = "<group>"; };
+		B2CCE17E1D9A67E700975DE9 /* NSString+CGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGSize.m"; sourceTree = "<group>"; };
+		B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		B2CCE1801D9A67E700975DE9 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		B2CCE1811D9A67E700975DE9 /* NSString+RMB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RMB.h"; sourceTree = "<group>"; };
+		B2CCE1821D9A67E700975DE9 /* NSString+RMB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RMB.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,7 @@
 		6E5F5F2E1D9A4AE100B2D630 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCE17C1D9A67E700975DE9 /* NSString */,
 				B2CCE1611D9A552700975DE9 /* NSObject */,
 			);
 			path = Foundation;
@@ -208,6 +221,19 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
+		B2CCE17C1D9A67E700975DE9 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCE17D1D9A67E700975DE9 /* NSString+CGSize.h */,
+				B2CCE17E1D9A67E700975DE9 /* NSString+CGSize.m */,
+				B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */,
+				B2CCE1801D9A67E700975DE9 /* NSString+MD5.m */,
+				B2CCE1811D9A67E700975DE9 /* NSString+RMB.h */,
+				B2CCE1821D9A67E700975DE9 /* NSString+RMB.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -217,11 +243,14 @@
 			files = (
 				B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */,
 				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
+				B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */,
 				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
 				6E5F5F4C1D9A62DF00B2D630 /* UIView+Capture.h in Headers */,
+				B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */,
 				6E5F5F481D9A615900B2D630 /* UINavigationController+PushFrame.h in Headers */,
 				6E5F5F341D9A4C2D00B2D630 /* UIView+Frame.h in Headers */,
+				B2CCE1831D9A67E700975DE9 /* NSString+CGSize.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,10 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CCE1881D9A67E700975DE9 /* NSString+RMB.m in Sources */,
 				6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */,
 				B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */,
+				B2CCE1861D9A67E700975DE9 /* NSString+MD5.m in Sources */,
 				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
 				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
+				B2CCE1841D9A67E700975DE9 /* NSString+CGSize.m in Sources */,
 				6E5F5F491D9A615900B2D630 /* UINavigationController+PushFrame.m in Sources */,
 				6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */,
 			);
