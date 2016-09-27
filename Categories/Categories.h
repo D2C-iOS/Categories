@@ -17,3 +17,9 @@ FOUNDATION_EXPORT const unsigned char CategoriesVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <Categories/PublicHeader.h>
 
 
+
+
+#import "Macros.h"
+#import "Foundation_Categories.h"
+#import "UIKit_Categories.h"
+

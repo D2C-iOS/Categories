@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Categories.h"
 
 
 @interface ViewController ()
@@ -33,6 +33,10 @@
     if (d & a) {
         NSLog(@"xxxx");
     }
+    
+    
+    NSLog(@"%lf", self.view.width);
+    
     
     
 }
