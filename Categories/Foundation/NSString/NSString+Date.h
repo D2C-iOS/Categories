@@ -1,5 +1,5 @@
 //
-//  NSString+CreateDate.h
+//  NSString+Date.h
 //  Categories
 //
 //  Created by fengjiwen on 16/9/27.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (CreateDate)
+@interface NSString (Date)
 
 // 例如：（小时:分钟） （刚刚） （几分钟前）
 - (NSString *)interval;
@@ -21,4 +21,8 @@
 
 // 例如：（今天 下午1:30）
 - (NSString *)intPAdate;
+
+// 时间转化
+- (NSTimeInterval) dateConverter;
+
 @end

@@ -10,12 +10,12 @@
 
 @interface NSString (RMB)
 
-//整数金额包含小数
+// 整数金额包含小数
 - (NSString *)RMBHasFractional;
 
-//整数金额不包含小数
+// 整数金额不包含小数
 - (NSString *)RMB;
 
-//不包含人民币符号
+// 不包含人民币符号
 - (NSString *)NoRMBSign;
 @end

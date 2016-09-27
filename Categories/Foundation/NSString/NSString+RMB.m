@@ -27,7 +27,7 @@
     NSString *newString = [NSString stringWithFormat:@"%@",mutableString];
     return newString;
 }
-//相同代码块
+// 相同代码块
 - (NSString *)sameCode {
     NSMutableString *mutableString = [NSMutableString stringWithString:self];
     NSRange range = [mutableString rangeOfString:@"."];

@@ -10,10 +10,10 @@
 
 @interface NSString (MD5)
 
-//返回大写MD5
+// 返回大写MD5
 @property (assign, nonatomic, readonly) NSString *MD5;
 
-//返回小写md5
+// 返回小写md5
 @property (assign, nonatomic, readonly) NSString *md5;
 
 @end

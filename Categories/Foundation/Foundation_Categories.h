@@ -13,12 +13,19 @@
 
 #import "NSString+MD5.h" // md5
 
-#import "NSString+CGSize.h" // 计算文本尺寸
+#import "NSString+Size.h" // 计算文本尺寸
 
 #import "NSString+RMB.h"  // 人民币格式
 
-#import "NSString+CreateDate.h" // 时间格式
+#import "NSString+Date.h" // 时间格式
 
+#import "NSString+base64.h"  // base64加密 解码
+
+#import "NSString+URLEncode.h" // 链接编码 解码
+
+#import "NSString+URLParameter.h" // 链接参数转化
+
+#include "NSString+SafeVerify.h"  // 安全校验
 #pragma mark - NSObject
 
 #import "NSObject+SafeObject.h" // 安全取数组

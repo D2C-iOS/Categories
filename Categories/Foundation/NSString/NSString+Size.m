@@ -1,14 +1,14 @@
 //
-//  NSString+CGSize.m
+//  NSString+Size.m
 //  Categories
 //
 //  Created by fengjiwen on 16/9/27.
 //  Copyright © 2016年 云之彼端. All rights reserved.
 //
 
-#import "NSString+CGSize.h"
+#import "NSString+Size.h"
 
-@implementation NSString (CGSize)
+@implementation NSString (Size)
 
 - (CGFloat)widthWithFont:(UIFont *)font height:(CGFloat)height {
     CGSize maxSize = CGSizeMake(9999, height);
@@ -29,6 +29,6 @@
 }
 
 - (CGSize)sizeWithFont:(UIFont *)font size:(CGSize)maxSize {
-   return  [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: font} context:NULL].size;
+    return  [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: font} context:NULL].size;
 }
 @end
