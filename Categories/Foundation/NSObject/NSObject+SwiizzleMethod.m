@@ -13,7 +13,6 @@
 
 
 + (void)swizzleMethod:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector {
-
     Method originalMethod = class_getInstanceMethod([self class], originalSelector);
     Method swizzledMethod = class_getInstanceMethod([self class], swizzledSelector);
     if (class_addMethod([self class],originalSelector,method_getImplementation(swizzledMethod),method_getTypeEncoding(swizzledMethod))) {

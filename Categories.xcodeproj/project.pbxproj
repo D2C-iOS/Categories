@@ -19,6 +19,10 @@
 		6E5F5F3E1D9A521C00B2D630 /* ESCategories.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */; };
 		6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */; };
 		6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */; };
+		6E5F5F481D9A615900B2D630 /* UINavigationController+PushFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F461D9A615900B2D630 /* UINavigationController+PushFrame.h */; };
+		6E5F5F491D9A615900B2D630 /* UINavigationController+PushFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F471D9A615900B2D630 /* UINavigationController+PushFrame.m */; };
+		6E5F5F4C1D9A62DF00B2D630 /* UIView+Capture.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F4A1D9A62DF00B2D630 /* UIView+Capture.h */; };
+		6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F4B1D9A62DF00B2D630 /* UIView+Capture.m */; };
 		B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */; };
 		B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */; };
 		B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */; };
@@ -50,6 +54,10 @@
 		6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESCategories.podspec; sourceTree = "<group>"; };
 		6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		6E5F5F461D9A615900B2D630 /* UINavigationController+PushFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PushFrame.h"; sourceTree = "<group>"; };
+		6E5F5F471D9A615900B2D630 /* UINavigationController+PushFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PushFrame.m"; sourceTree = "<group>"; };
+		6E5F5F4A1D9A62DF00B2D630 /* UIView+Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Capture.h"; sourceTree = "<group>"; };
+		6E5F5F4B1D9A62DF00B2D630 /* UIView+Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Capture.m"; sourceTree = "<group>"; };
 		B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeObject.h"; sourceTree = "<group>"; };
 		B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeObject.m"; sourceTree = "<group>"; };
 		B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwiizzleMethod.h"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		6E5F5F2F1D9A4AE100B2D630 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F451D9A614300B2D630 /* UINavigationController */,
 				6E5F5F401D9A551900B2D630 /* UITextView */,
 				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
 				6E5F5F301D9A4BE700B2D630 /* UIView */,
@@ -152,6 +161,8 @@
 			children = (
 				6E5F5F321D9A4C2D00B2D630 /* UIView+Frame.h */,
 				6E5F5F331D9A4C2D00B2D630 /* UIView+Frame.m */,
+				6E5F5F4A1D9A62DF00B2D630 /* UIView+Capture.h */,
+				6E5F5F4B1D9A62DF00B2D630 /* UIView+Capture.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -177,6 +188,15 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		6E5F5F451D9A614300B2D630 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				6E5F5F461D9A615900B2D630 /* UINavigationController+PushFrame.h */,
+				6E5F5F471D9A615900B2D630 /* UINavigationController+PushFrame.m */,
+			);
+			path = UINavigationController;
+			sourceTree = "<group>";
+		};
 		B2CCE1611D9A552700975DE9 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +219,8 @@
 				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
 				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
+				6E5F5F4C1D9A62DF00B2D630 /* UIView+Capture.h in Headers */,
+				6E5F5F481D9A615900B2D630 /* UINavigationController+PushFrame.h in Headers */,
 				6E5F5F341D9A4C2D00B2D630 /* UIView+Frame.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +331,8 @@
 				6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */,
 				B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */,
 				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
+				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
+				6E5F5F491D9A615900B2D630 /* UINavigationController+PushFrame.m in Sources */,
 				6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
