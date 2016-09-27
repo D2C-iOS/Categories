@@ -35,6 +35,11 @@
 		6E5F5F321D9A4C2D00B2D630 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		6E5F5F331D9A4C2D00B2D630 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKit_Categories.h; sourceTree = "<group>"; };
+		6E5F5F381D9A4E0100B2D630 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		6E5F5F391D9A4E3400B2D630 /* Macros_ClangAttributes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_ClangAttributes.h; sourceTree = "<group>"; };
+		6E5F5F3A1D9A4E9700B2D630 /* Macros_Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Color.h; sourceTree = "<group>"; };
+		6E5F5F3B1D9A4F2200B2D630 /* Macros_Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Font.h; sourceTree = "<group>"; };
+		6E5F5F3C1D9A4F4B00B2D630 /* Macros_Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros_Size.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +81,7 @@
 		6E5F5F061D9A0B4400B2D630 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F371D9A4DD600B2D630 /* Macros */,
 				6E5F5F2E1D9A4AE100B2D630 /* Foundation */,
 				6E5F5F2F1D9A4AE100B2D630 /* UIKit */,
 				6E5F5F071D9A0B4400B2D630 /* Categories.h */,
@@ -131,6 +137,18 @@
 				6E5F5F331D9A4C2D00B2D630 /* UIView+Frame.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		6E5F5F371D9A4DD600B2D630 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				6E5F5F381D9A4E0100B2D630 /* Macros.h */,
+				6E5F5F391D9A4E3400B2D630 /* Macros_ClangAttributes.h */,
+				6E5F5F3A1D9A4E9700B2D630 /* Macros_Color.h */,
+				6E5F5F3B1D9A4F2200B2D630 /* Macros_Font.h */,
+				6E5F5F3C1D9A4F4B00B2D630 /* Macros_Size.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
