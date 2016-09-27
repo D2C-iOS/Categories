@@ -19,6 +19,10 @@
 		6E5F5F3E1D9A521C00B2D630 /* ESCategories.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */; };
 		6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */; };
 		6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */; };
+		B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */; };
+		B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */; };
+		B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */; };
+		B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		6E5F5F3D1D9A521C00B2D630 /* ESCategories.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ESCategories.podspec; sourceTree = "<group>"; };
 		6E5F5F411D9A552600B2D630 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		6E5F5F421D9A552600B2D630 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeObject.h"; sourceTree = "<group>"; };
+		B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeObject.m"; sourceTree = "<group>"; };
+		B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwiizzleMethod.h"; sourceTree = "<group>"; };
+		B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwiizzleMethod.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 		6E5F5F2E1D9A4AE100B2D630 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B2CCE1611D9A552700975DE9 /* NSObject */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -168,6 +177,17 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		B2CCE1611D9A552700975DE9 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */,
+				B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */,
+				B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */,
+				B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -175,6 +195,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */,
+				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
 				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
 				6E5F5F341D9A4C2D00B2D630 /* UIView+Frame.h in Headers */,
@@ -285,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */,
+				B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */,
+				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
 				6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
