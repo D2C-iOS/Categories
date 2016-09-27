@@ -71,6 +71,8 @@
 		6E5F5F061D9A0B4400B2D630 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F2E1D9A4AE100B2D630 /* Foundation */,
+				6E5F5F2F1D9A4AE100B2D630 /* UIKit */,
 				6E5F5F071D9A0B4400B2D630 /* Categories.h */,
 				6E5F5F081D9A0B4400B2D630 /* Info.plist */,
 			);
@@ -99,6 +101,20 @@
 				6E5F5F161D9A0B4E00B2D630 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6E5F5F2E1D9A4AE100B2D630 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		6E5F5F2F1D9A4AE100B2D630 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

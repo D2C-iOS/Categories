@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSInteger a = 1 << 1;
+    NSInteger b = 1 << 2;
+    NSInteger c = 1 << 3;
+    
+    
+    NSLog(@"%ld %ld %ld",a,b,c);
+    
+    NSInteger d = a | b;
+    
+    
+    if (d & a) {
+        NSLog(@"xxxx");
+    }
+    
+    
 }
 
 
