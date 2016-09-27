@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562D3C041D9A7050002FD276 /* UIColor+HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C021D9A7050002FD276 /* UIColor+HexColor.h */; };
+		562D3C051D9A7050002FD276 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C031D9A7050002FD276 /* UIColor+HexColor.m */; };
 		6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F071D9A0B4400B2D630 /* Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E5F5F171D9A0B4E00B2D630 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F161D9A0B4E00B2D630 /* main.m */; };
 		6E5F5F1A1D9A0B4E00B2D630 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F191D9A0B4E00B2D630 /* AppDelegate.m */; };
@@ -71,6 +73,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		562D3C021D9A7050002FD276 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		562D3C031D9A7050002FD276 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		6E5F5F041D9A0B4400B2D630 /* Categories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Categories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5F5F071D9A0B4400B2D630 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		6E5F5F081D9A0B4400B2D630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		562D3C011D9A703C002FD276 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				562D3C021D9A7050002FD276 /* UIColor+HexColor.h */,
+				562D3C031D9A7050002FD276 /* UIColor+HexColor.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		6E5F5EFA1D9A0B4400B2D630 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +214,7 @@
 		6E5F5F2F1D9A4AE100B2D630 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				562D3C011D9A703C002FD276 /* UIColor */,
 				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
 				6E5F5F451D9A614300B2D630 /* UINavigationController */,
 				6E5F5F401D9A551900B2D630 /* UITextView */,
@@ -287,6 +301,7 @@
 				B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */,
 				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
 				6E5F5F581D9A6F7A00B2D630 /* UIKit_Categories.h in Headers */,
+				562D3C041D9A7050002FD276 /* UIColor+HexColor.h in Headers */,
 				B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */,
 				6E5F5F551D9A6F7500B2D630 /* Macros_Color.h in Headers */,
 				6E5F5F541D9A6F7500B2D630 /* Macros.h in Headers */,
@@ -418,6 +433,7 @@
 				B2CCE1901D9A6D8800975DE9 /* NSString+CreateDate.m in Sources */,
 				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
 				B2CCE1841D9A67E700975DE9 /* NSString+CGSize.m in Sources */,
+				562D3C051D9A7050002FD276 /* UIColor+HexColor.m in Sources */,
 				6E5F5F491D9A615900B2D630 /* UINavigationController+PushFrame.m in Sources */,
 				6E5F5F441D9A552600B2D630 /* UITextView+Placeholder.m in Sources */,
 			);
