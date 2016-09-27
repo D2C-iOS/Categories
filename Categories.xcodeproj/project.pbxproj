@@ -13,6 +13,14 @@
 		562D3C0A1D9A7353002FD276 /* NSDictionary+json.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C081D9A7353002FD276 /* NSDictionary+json.m */; };
 		562D3C0E1D9A747A002FD276 /* UITextField+image.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C0C1D9A747A002FD276 /* UITextField+image.h */; };
 		562D3C0F1D9A747A002FD276 /* UITextField+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C0D1D9A747A002FD276 /* UITextField+image.m */; };
+		562D3C301D9A882D002FD276 /* UIControl+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C251D9A882D002FD276 /* UIControl+Extension.h */; };
+		562D3C311D9A882D002FD276 /* UIControl+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C261D9A882D002FD276 /* UIControl+Extension.m */; };
+		562D3C321D9A882D002FD276 /* UIDevice+DeviceType.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C281D9A882D002FD276 /* UIDevice+DeviceType.h */; };
+		562D3C331D9A882D002FD276 /* UIDevice+DeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C291D9A882D002FD276 /* UIDevice+DeviceType.m */; };
+		562D3C341D9A882D002FD276 /* UINavigationItem+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C2B1D9A882D002FD276 /* UINavigationItem+Extension.h */; };
+		562D3C351D9A882D002FD276 /* UINavigationItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C2C1D9A882D002FD276 /* UINavigationItem+Extension.m */; };
+		562D3C361D9A882D002FD276 /* UITabBar+badge.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C2E1D9A882D002FD276 /* UITabBar+badge.h */; };
+		562D3C371D9A882D002FD276 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 562D3C2F1D9A882D002FD276 /* UITabBar+badge.m */; };
 		6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5F071D9A0B4400B2D630 /* Categories.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E5F5F171D9A0B4E00B2D630 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F161D9A0B4E00B2D630 /* main.m */; };
 		6E5F5F1A1D9A0B4E00B2D630 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5F191D9A0B4E00B2D630 /* AppDelegate.m */; };
@@ -95,6 +103,14 @@
 		562D3C081D9A7353002FD276 /* NSDictionary+json.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+json.m"; sourceTree = "<group>"; };
 		562D3C0C1D9A747A002FD276 /* UITextField+image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+image.h"; sourceTree = "<group>"; };
 		562D3C0D1D9A747A002FD276 /* UITextField+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+image.m"; sourceTree = "<group>"; };
+		562D3C251D9A882D002FD276 /* UIControl+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Extension.h"; sourceTree = "<group>"; };
+		562D3C261D9A882D002FD276 /* UIControl+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Extension.m"; sourceTree = "<group>"; };
+		562D3C281D9A882D002FD276 /* UIDevice+DeviceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceType.h"; sourceTree = "<group>"; };
+		562D3C291D9A882D002FD276 /* UIDevice+DeviceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceType.m"; sourceTree = "<group>"; };
+		562D3C2B1D9A882D002FD276 /* UINavigationItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Extension.h"; sourceTree = "<group>"; };
+		562D3C2C1D9A882D002FD276 /* UINavigationItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Extension.m"; sourceTree = "<group>"; };
+		562D3C2E1D9A882D002FD276 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
+		562D3C2F1D9A882D002FD276 /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
 		6E5F5F041D9A0B4400B2D630 /* Categories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Categories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5F5F071D9A0B4400B2D630 /* Categories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		6E5F5F081D9A0B4400B2D630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,6 +212,42 @@
 			path = UITextFiled;
 			sourceTree = "<group>";
 		};
+		562D3C241D9A882D002FD276 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				562D3C251D9A882D002FD276 /* UIControl+Extension.h */,
+				562D3C261D9A882D002FD276 /* UIControl+Extension.m */,
+			);
+			path = UIControl;
+			sourceTree = "<group>";
+		};
+		562D3C271D9A882D002FD276 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				562D3C281D9A882D002FD276 /* UIDevice+DeviceType.h */,
+				562D3C291D9A882D002FD276 /* UIDevice+DeviceType.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		562D3C2A1D9A882D002FD276 /* UINavigationItem */ = {
+			isa = PBXGroup;
+			children = (
+				562D3C2B1D9A882D002FD276 /* UINavigationItem+Extension.h */,
+				562D3C2C1D9A882D002FD276 /* UINavigationItem+Extension.m */,
+			);
+			path = UINavigationItem;
+			sourceTree = "<group>";
+		};
+		562D3C2D1D9A882D002FD276 /* UITabBar */ = {
+			isa = PBXGroup;
+			children = (
+				562D3C2E1D9A882D002FD276 /* UITabBar+badge.h */,
+				562D3C2F1D9A882D002FD276 /* UITabBar+badge.m */,
+			);
+			path = UITabBar;
+			sourceTree = "<group>";
+		};
 		6E5F5EFA1D9A0B4400B2D630 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +319,10 @@
 			children = (
 				B2FB64051D9A8D8800634042 /* UIAlertView */,
 				B2FB64081D9A8D8800634042 /* UIButton */,
+				562D3C241D9A882D002FD276 /* UIControl */,
+				562D3C271D9A882D002FD276 /* UIDevice */,
+				562D3C2A1D9A882D002FD276 /* UINavigationItem */,
+				562D3C2D1D9A882D002FD276 /* UITabBar */,
 				562D3C0B1D9A7454002FD276 /* UITextFiled */,
 				562D3C011D9A703C002FD276 /* UIColor */,
 				6E5F5F361D9A4D1900B2D630 /* UIKit_Categories.h */,
@@ -379,10 +435,13 @@
 			files = (
 				6E5F5F561D9A6F7500B2D630 /* Macros_Font.h in Headers */,
 				B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */,
+				562D3C361D9A882D002FD276 /* UITabBar+badge.h in Headers */,
 				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
 				6E5F5F581D9A6F7A00B2D630 /* UIKit_Categories.h in Headers */,
 				562D3C041D9A7050002FD276 /* UIColor+HexColor.h in Headers */,
 				B2CCE1DB1D9A7B2600975DE9 /* NSString+URLParameter.h in Headers */,
+				562D3C301D9A882D002FD276 /* UIControl+Extension.h in Headers */,
+				562D3C341D9A882D002FD276 /* UINavigationItem+Extension.h in Headers */,
 				562D3C091D9A7353002FD276 /* NSDictionary+json.h in Headers */,
 				B2CCE1D91D9A7B2600975DE9 /* NSString+URLEncode.h in Headers */,
 				B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */,
@@ -390,6 +449,7 @@
 				6E5F5F541D9A6F7500B2D630 /* Macros.h in Headers */,
 				6E5F5F431D9A552600B2D630 /* UITextView+Placeholder.h in Headers */,
 				B2CCE1D31D9A7B2600975DE9 /* NSString+Date.h in Headers */,
+				562D3C321D9A882D002FD276 /* UIDevice+DeviceType.h in Headers */,
 				6E5F5F091D9A0B4400B2D630 /* Categories.h in Headers */,
 				B2FB640B1D9A8D8800634042 /* UIAlertView+Block.h in Headers */,
 				B2CCE1D51D9A7B2600975DE9 /* NSString+SafeVerify.h in Headers */,
@@ -518,11 +578,15 @@
 				B2CCE1D61D9A7B2600975DE9 /* NSString+SafeVerify.m in Sources */,
 				B2CCE1D41D9A7B2600975DE9 /* NSString+Date.m in Sources */,
 				B2CCE1DA1D9A7B2600975DE9 /* NSString+URLEncode.m in Sources */,
+				562D3C351D9A882D002FD276 /* UINavigationItem+Extension.m in Sources */,
 				6E5F5F351D9A4C2D00B2D630 /* UIView+Frame.m in Sources */,
+				562D3C371D9A882D002FD276 /* UITabBar+badge.m in Sources */,
 				B2CCE1D81D9A7B2600975DE9 /* NSString+Size.m in Sources */,
 				B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */,
+				562D3C331D9A882D002FD276 /* UIDevice+DeviceType.m in Sources */,
 				B2CCE1861D9A67E700975DE9 /* NSString+MD5.m in Sources */,
 				B2CCE1D21D9A7B2600975DE9 /* NSString+base64.m in Sources */,
+				562D3C311D9A882D002FD276 /* UIControl+Extension.m in Sources */,
 				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
 				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
 				B2CCE1DC1D9A7B2600975DE9 /* NSString+URLParameter.m in Sources */,

@@ -32,4 +32,6 @@
 
 #import "NSObject+SwiizzleMethod.h" // 运行时替换方法
 
+#pragma mark - NSDictionary
+#import "NSDictionary+json.h" //字典转为字符串json
 #endif /* Foundation_Categories_h */
