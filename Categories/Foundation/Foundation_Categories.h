@@ -18,8 +18,9 @@
 #import "NSString+base64.h"     // base64加密 解码
 #import "NSString+URLEncode.h"  // 链接编码 解码
 #import "NSString+URLParameter.h"   // 链接参数转化
-#include "NSString+SafeVerify.h"    // 安全校验
-
+#import "NSString+SafeVerify.h"    // 安全校验
+#import "NSString+HTML.h"  // 去除html标签
+#import "NSString+XML.h"   // 去除xml特殊字符
 
 #pragma mark - NSObject
 

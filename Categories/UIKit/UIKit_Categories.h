@@ -47,4 +47,15 @@
 #pragma mark - UINavigationController
 
 #import "UINavigationController+PushFrame.h" //获取控制器
+
+#pragma mark - UIButton 
+
+#import "UIButton+BadgeValue.h"     // 按钮右上角红点
+#import "UIButton+Block.h"          // 按钮点击block回调方式
+#import "UIButton+LayoutSubviews.h" // 按钮里图片 文字布局
+
+#pragma mark - UIAlertView
+
+#import "UIAlertView+Block.h"   // UIAlertView 添加block回调
+
 #endif /* UIKit_Categories_h */
