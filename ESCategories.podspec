@@ -9,9 +9,9 @@ s.author       = { 'cezres' => 'cezres@163.com' }
 
 s.platform     = :ios, '7.0'
 s.source       = { :git => 'https://github.com/D2C-iOS/Categories.git', :tag => s.version }
-s.source_files = 'Categories'
+s.source_files = 'Categories/**/*.{h,m}'
 s.requires_arc = true
-s.public_header_files = 'Categories/*.h'
+s.public_header_files = 'Categories/**/*.h'
 
 end
 

@@ -26,8 +26,19 @@
 #pragma mark - AOP
 - (void)placeholder_setFont:(UIFont *)font {
     [self placeholder_setFont:font];
-    self.placeholderLabel.font = font;
+    if (self.placeholderLabel) {
+        self.placeholderLabel.font = font;
+        [self setNeedsLayout];
+    }
 }
+
+- (void)placeholder_layoutSubviews {
+    [self placeholder_layoutSubviews];
+    if (self.placeholderLabel) {
+        self.placeholderLabel.frame = CGRectMake(4, 7, self.bounds.size.width - 8, self.font.lineHeight);
+    }
+}
+
 
 #pragma mark - Set
 - (void)setPlaceholder:(NSString *)placeholder {
