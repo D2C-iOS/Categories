@@ -10,14 +10,14 @@
 
 @implementation NSString (SafeVerify)
 
-- (BOOL)isValid{
+- (BOOL)isValid {
     if (self.length == 0) {
         return NO;
     }
     return YES;
 }
 
--(BOOL)isEmpty{
+-(BOOL)isEmpty {
     if (!self) {
         return true;
     } else {
@@ -32,7 +32,7 @@
     }
 }
 
--(BOOL)judgePassWordLegal{
+-(BOOL)judgePassWordLegal {
     BOOL result = false;
     if ([self length] >= 6){
         // 判断长度大于6位后再接着判断是否同时包含数字和字符
@@ -44,10 +44,10 @@
     return result;
 }
 
--(BOOL)walletPWDValid{
+-(BOOL)walletPWDValid {
     
     BOOL result = false;
-    if ([self length] >= 8){
+    if ([self length] >= 8) {
         // 判断长度大于6位后再接着判断是否同时包含数字和字符
         NSString * regex = @"(?!^\\d+$)(?!^[a-zA-Z]+$)[a-zA-Z0-9]{8,20}";//@"^(?![0-9]+$)(?![a-zA-Z]+$).{8,20}$"; //
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
@@ -58,7 +58,7 @@
 }
 
 
--(BOOL)isValidPhoneNumWithPredicate:(NSString *)predicate{
+-(BOOL)isValidPhoneNumWithPredicate:(NSString *)predicate {
     
     if (predicate.length == 0 || predicate == nil) {
         return NO;
@@ -68,26 +68,22 @@
     return result;
 }
 
-- (BOOL)validateEmail
-{
+- (BOOL)validateEmail {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
 
-- (BOOL)validatePhone
-{
+- (BOOL)validatePhone {
     NSString *phoneRegex = @"1[3|5|7|8|][0-9]{9}";
     NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
     return [phoneTest evaluateWithObject:self];
 }
 
-- (BOOL)includeChinese
-{
-    for(int i=0; i< [self length];i++)
-    {
+- (BOOL)includeChinese {
+    for(int i=0; i< [self length];i++) {
         int a =[self characterAtIndex:i];
-        if( a >0x4e00&& a <0x9fff){
+        if( a >0x4e00&& a <0x9fff) {
             return YES;
             
         }
@@ -95,8 +91,7 @@
     return NO;
 }
 
-- (BOOL)stringContainsEmoji
-{
+- (BOOL)stringContainsEmoji {
     __block BOOL returnValue =NO;
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         const unichar hs = [substring characterAtIndex:0];
@@ -132,9 +127,9 @@
     return returnValue;
 }
 
-- (BOOL)isPureNumandCharacters{
+- (BOOL)isPureNumandCharacters {
     NSString *string = [self  stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
-    if(string.length > 0){
+    if(string.length > 0) {
         return NO;
     }
     return YES;
