@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = 'ESCategories'
-s.version      = '0.1.0'
+s.version      = '0.1.2'
 s.summary      = 'D2C iOS拓展分类.'
 s.homepage     = 'https://github.com/D2C-iOS/Categories'
 s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,5 +14,4 @@ s.requires_arc = true
 s.public_header_files = 'Categories/*.h'
 
 end
-
 
