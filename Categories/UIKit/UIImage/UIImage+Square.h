@@ -10,4 +10,10 @@
 
 @interface UIImage (Square)
 
+- (UIImage *)square;
+
 @end
+
+
+
+
