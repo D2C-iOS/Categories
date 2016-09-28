@@ -24,7 +24,6 @@
 
 #pragma mark - NSObject
 
-#import "NSObject+SafeObject.h" // 安全取数组
 #import "NSObject+SwiizzleMethod.h" // 运行时替换方法
 
 #pragma mark - NSDictionary

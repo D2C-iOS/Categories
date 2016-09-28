@@ -55,8 +55,6 @@
 		6E5F5FA81D9BAFB600B2D630 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5FA61D9BAFB600B2D630 /* UIImage+Color.m */; };
 		6E5F5FAB1D9BB20000B2D630 /* UIImage+Square.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5FA91D9BB20000B2D630 /* UIImage+Square.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E5F5FAC1D9BB20000B2D630 /* UIImage+Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5FAA1D9BB20000B2D630 /* UIImage+Square.m */; };
-		B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */; };
 		B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */; };
 		B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -167,8 +165,6 @@
 		6E5F5FA61D9BAFB600B2D630 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		6E5F5FA91D9BB20000B2D630 /* UIImage+Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Square.h"; sourceTree = "<group>"; };
 		6E5F5FAA1D9BB20000B2D630 /* UIImage+Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Square.m"; sourceTree = "<group>"; };
-		B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SafeObject.h"; sourceTree = "<group>"; };
-		B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SafeObject.m"; sourceTree = "<group>"; };
 		B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwiizzleMethod.h"; sourceTree = "<group>"; };
 		B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwiizzleMethod.m"; sourceTree = "<group>"; };
 		B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -305,10 +301,10 @@
 		6E5F5F061D9A0B4400B2D630 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6E5F5F071D9A0B4400B2D630 /* Categories.h */,
 				6E5F5F371D9A4DD600B2D630 /* Macros */,
 				6E5F5F2E1D9A4AE100B2D630 /* Foundation */,
 				6E5F5F2F1D9A4AE100B2D630 /* UIKit */,
-				6E5F5F071D9A0B4400B2D630 /* Categories.h */,
 				6E5F5F081D9A0B4400B2D630 /* Info.plist */,
 			);
 			path = Categories;
@@ -341,8 +337,8 @@
 		6E5F5F2E1D9A4AE100B2D630 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				562D3C061D9A732C002FD276 /* NSDictionary */,
 				6E5F5F591D9A6FFB00B2D630 /* Foundation_Categories.h */,
+				562D3C061D9A732C002FD276 /* NSDictionary */,
 				B2CCE17C1D9A67E700975DE9 /* NSString */,
 				B2CCE1611D9A552700975DE9 /* NSObject */,
 			);
@@ -446,8 +442,6 @@
 		B2CCE1611D9A552700975DE9 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				B2CCE1621D9A552700975DE9 /* NSObject+SafeObject.h */,
-				B2CCE1631D9A552700975DE9 /* NSObject+SafeObject.m */,
 				B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */,
 				B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */,
 			);
@@ -511,7 +505,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5F5F561D9A6F7500B2D630 /* Macros_Font.h in Headers */,
-				B2CCE1661D9A552700975DE9 /* NSObject+SafeObject.h in Headers */,
 				B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */,
 				6E5F5F581D9A6F7A00B2D630 /* UIKit_Categories.h in Headers */,
 				B2CCE1871D9A67E700975DE9 /* NSString+RMB.h in Headers */,
@@ -680,7 +673,6 @@
 				6E5F5FA81D9BAFB600B2D630 /* UIImage+Color.m in Sources */,
 				562D3C311D9A882D002FD276 /* UIControl+Extension.m in Sources */,
 				B2FB641E1D9BAB0900634042 /* UIButton+LayoutSubviews.m in Sources */,
-				B2CCE1671D9A552700975DE9 /* NSObject+SafeObject.m in Sources */,
 				6E5F5F4D1D9A62DF00B2D630 /* UIView+Capture.m in Sources */,
 				B2CCE1DC1D9A7B2600975DE9 /* NSString+URLParameter.m in Sources */,
 				B2FB641A1D9BAA1E00634042 /* UIButton+Block.m in Sources */,
