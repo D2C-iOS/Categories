@@ -15,6 +15,4 @@
  *  @param imageName 图片名称
  */
 - (void)setRightViewImage:(NSString *)imageName;
-
-
 @end

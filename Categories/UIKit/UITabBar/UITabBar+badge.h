@@ -12,16 +12,16 @@
 /**
  *  显示小红点
  *
- *  @param index <#index description#>
+ *  @param index 位置
  *
- *  @param carCount <#index description#>
+ *  @param carCount 数量
  *
  */
 - (void)showBadgeOnItemIndex:(int)index count:(NSInteger)carCount;
 /**
  *  隐藏小红点
  *
- *  @param index <#index description#>
+ *  @param index 位置
  */
 - (void)hideBadgeOnItemIndex:(int)index;
 @end
