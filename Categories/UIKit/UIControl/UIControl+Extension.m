@@ -10,40 +10,38 @@
 #import <objc/runtime.h>
 @implementation UIControl (Extension)
 
-static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";
-static const char *uxy_ignoreEventKey            = "uxy_ignoreEventKey";
-
 + (void)load {
     Method a = class_getInstanceMethod(self, @selector(sendAction:to:forEvent:));
-    Method b = class_getInstanceMethod(self, @selector(__uxy_sendAction:to:forEvent:));
+    Method b = class_getInstanceMethod(self, @selector(uxy_sendAction:to:forEvent:));
     method_exchangeImplementations(a, b);
 }
 
-- (void)__uxy_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
-    if (self.uxy_ignoreEvent.boolValue) {
+- (void)uxy_sendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
+    if (self.ignoreEvent.boolValue) {
         return;
     }
     
-    if (self.uxy_acceptEventInterval > 0) {
-        self.uxy_ignoreEvent = @(YES);
-        [self performSelector:@selector(setUxy_ignoreEvent:) withObject:@(NO) afterDelay:self.uxy_acceptEventInterval];
+    if (self.acceptEventInterval > 0) {
+        self.ignoreEvent = @(YES);
+        [self performSelector:@selector(setIgnoreEvent:) withObject:@(NO) afterDelay:self.acceptEventInterval];
     }
-    [self __uxy_sendAction:action to:target forEvent:event];
+    [self uxy_sendAction:action to:target forEvent:event];
 }
 
 #pragma mark - Get
-- (NSTimeInterval)uxy_acceptEventInterval {
-    return [objc_getAssociatedObject(self, @selector(uxy_acceptEventInterval)) doubleValue];
+- (NSTimeInterval)acceptEventInterval {
+    return [objc_getAssociatedObject(self, @selector(acceptEventInterval)) doubleValue];
 }
--(NSNumber *)uxy_ignoreEvent {
-    return objc_getAssociatedObject(self, uxy_ignoreEventKey);
+-(NSNumber *)ignoreEvent {
+    return objc_getAssociatedObject(self, @selector(ignoreEvent));
 }
 
 #pragma mark - Set
-- (void)setUxy_acceptEventInterval:(NSTimeInterval)uxy_acceptEventInterval {
-    objc_setAssociatedObject(self, @selector(uxy_acceptEventInterval), @(uxy_acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setAcceptEventInterval:(NSTimeInterval)acceptEventInterval {
+    objc_setAssociatedObject(self, @selector(acceptEventInterval), @(acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
 }
--(void)setUxy_ignoreEvent:(NSNumber *)uxy_ignoreEvent {
-    objc_setAssociatedObject(self, uxy_ignoreEventKey, uxy_ignoreEvent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setIgnoreEvent:(NSNumber *)ignoreEvent {
+    objc_setAssociatedObject(self, @selector(ignoreEvent), ignoreEvent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 @end

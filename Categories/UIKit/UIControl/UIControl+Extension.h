@@ -12,9 +12,9 @@
 /**
  *  两次响应之间的时间间隔
  */
-@property (nonatomic, assign) NSTimeInterval uxy_acceptEventInterval;
+@property (nonatomic, assign) NSTimeInterval acceptEventInterval;
 /**
  *  是否忽略事件true 忽略 flase不忽略
  */
-@property (nonatomic, strong) NSNumber *uxy_ignoreEvent;
+@property (nonatomic, strong) NSNumber *ignoreEvent;
 @end
