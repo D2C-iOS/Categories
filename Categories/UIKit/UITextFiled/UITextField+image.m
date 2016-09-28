@@ -9,9 +9,9 @@
 #import "UITextField+image.h"
 
 @implementation UITextField (image)
--(void)setRightViewImage:(NSString *)imageName{
+-(void)setRightViewImage:(NSString *)imageName {
     NSString *str = @"icon-clear";
-    if (imageName != nil) {
+    if (imageName) {
         str = imageName;
     }
     self.clearButtonMode = UITextFieldViewModeWhileEditing;

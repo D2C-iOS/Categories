@@ -11,7 +11,7 @@
 
 #define TabbarItemNums 5.0
 @implementation UITabBar (badge)
-- (void)showBadgeOnItemIndex:(int)index count:(NSInteger)carCount{
+- (void)showBadgeOnItemIndex:(int)index count:(NSInteger)carCount {
     //移除之前的 badge
     [self removeBadgeOnItemIndex:index];
     
@@ -22,9 +22,9 @@
     badgeView.textAlignment = NSTextAlignmentCenter;
     badgeView.tag           = 888+ index;
 
-    badgeView.layer.cornerRadius=7;//圆形
+    badgeView.layer.cornerRadius=7;
     badgeView.layer.masksToBounds = YES;
-    badgeView.backgroundColor=[UIColor redColor];//颜色：红色
+    badgeView.backgroundColor=[UIColor redColor];
     
     CGRect tabFrame=self.frame;
     
@@ -36,21 +36,21 @@
         badgeView.text = [NSString stringWithFormat:@"%ld",carCount];
         badgeView.frame= CGRectMake(x, y,14,14);
     }
-    else if (carCount>=10){
+    else if (carCount>=10) {
         badgeView.text = [NSString stringWithFormat:@"%ld",carCount];
         badgeView.frame= CGRectMake(x, y,20,14);
     }
-    else if (carCount>99){
+    else if (carCount>99) {
         badgeView.text = @"99+";
         badgeView.frame= CGRectMake(x, y,25,14);
     }
     [self addSubview:badgeView];
 }
-- (void)hideBadgeOnItemIndex:(int)index{
+- (void)hideBadgeOnItemIndex:(int)index {
     [self removeBadgeOnItemIndex:index];
 }
 
-- (void)removeBadgeOnItemIndex:(int)index{
+- (void)removeBadgeOnItemIndex:(int)index {
     for (UIView *subView in self.subviews) {
         if (subView.tag == 888 + index) {
             [subView removeFromSuperview];

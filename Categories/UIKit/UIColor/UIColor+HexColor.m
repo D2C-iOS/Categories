@@ -9,12 +9,11 @@
 #import "UIColor+HexColor.h"
 
 @implementation UIColor (HexColor)
-+ (UIColor *)colorFromHexRGB:(NSString *)hexColorStr{
++ (UIColor *)colorFromHexRGB:(NSString *)hexColorStr {
     unsigned int colorCode = 0;
     unsigned char redByte, greenByte, blueByte;
     
-    if (nil != hexColorStr)
-    {
+    if (hexColorStr) {
         NSScanner *scanner = [NSScanner scannerWithString:hexColorStr];
         [scanner scanHexInt:&colorCode];
         redByte = (unsigned char) (colorCode >> 16);
@@ -25,7 +24,7 @@
                 green:        greenByte/ 255.0
                 blue: blueByte / 255.0
                 alpha:1.0];
-    }
+    } 
     else {
         return nil;
     }

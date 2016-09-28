@@ -9,13 +9,13 @@
 #import "NSDictionary+json.h"
 
 @implementation NSDictionary (json)
-- (NSString *)toJsonString{
+- (NSString *)toJsonString {
     NSString *jsonString = nil;
     NSError  *error;
     NSData   *jsonData = [NSJSONSerialization dataWithJSONObject:self
                                                        options:NSJSONWritingPrettyPrinted
                                                          error:&error];
-    if (jsonData != nil) {
+    if (jsonData) {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     return jsonString;

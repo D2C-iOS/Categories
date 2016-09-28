@@ -11,38 +11,38 @@
 #import <objc/runtime.h>
 #import "Macros_Font.h"
 @implementation UINavigationItem (Extension)
-- (void)setMessageCountWithCount:(NSNumber *)count{
+- (void)setMessageCountWithCount:(NSNumber *)count {
     if (count.integerValue> 0) {
         self.countLabel.hidden = NO;
         if (count.integerValue > 9) {
             self.countLabel.width = 20;
             self.countLabel.text = @"9+";
         }
-        else{
+        else {
             self.countLabel.width = 14;
             self.countLabel.text =  [NSString stringWithFormat:@"%ld",(long)count.integerValue];
         }
     }
-    else{
+    else {
         self.countLabel.width = 14;
         self.countLabel.hidden = YES;
     }
 }
 #pragma mark - Get
-- (NSArray<UIButton *> *)leftBarButtons{
+- (NSArray<UIButton *> *)leftBarButtons {
     return self.leftBarButtonItems[1].customView.subviews;
 }
-- (NSArray<UIButton *> *)rightBarButtons{
+- (NSArray<UIButton *> *)rightBarButtons {
     return self.leftBarButtonItems[1].customView.subviews;
 }
-- (UILabel *)countLabel{
+- (UILabel *)countLabel {
     return objc_getAssociatedObject(self, @selector(countLabel));
 }
-- (NSArray<UIButton *> *)noticeLeftBarButtons{
+- (NSArray<UIButton *> *)noticeLeftBarButtons {
    return self.leftBarButtonItems[1].customView.subviews;
 }
 #pragma makr - Sett
-- (void)setLeftBarButtons:(NSArray<__kindof UIButton *> *)leftBarButtons{
+- (void)setLeftBarButtons:(NSArray<__kindof UIButton *> *)leftBarButtons {
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spacer.width = -16;
     UIView *customView = [[UIView alloc] init];
@@ -60,7 +60,7 @@
     UIBarButtonItem *items = [[UIBarButtonItem alloc] initWithCustomView:customView];
     self.leftBarButtonItems = @[spacer,items];
 }
-- (void)setRightBarButtons:(NSArray<__kindof UIButton *> *)rightBarButtons{
+- (void)setRightBarButtons:(NSArray<__kindof UIButton *> *)rightBarButtons {
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spacer.width = -10;
     UIView *customView = [[UIView alloc] init];
@@ -82,16 +82,15 @@
     UIBarButtonItem *items = [[UIBarButtonItem alloc] initWithCustomView:customView];
     self.rightBarButtonItems = @[spacer, items];
 }
-- (void)setCountLabel:(UILabel *)countLabel{
+- (void)setCountLabel:(UILabel *)countLabel {
     objc_setAssociatedObject(self, @selector(countLabel), countLabel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (void)setNoticeLeftBarButtons:(NSArray<__kindof UIButton *> *)noticeLeftBarButtons{
+- (void)setNoticeLeftBarButtons:(NSArray<__kindof UIButton *> *)noticeLeftBarButtons {
     
     UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     spacer.width = -16;
     
     UIView *customView = [[UIView alloc] init];
-    //    customView.backgroundColor = [UIColor orangeColor];
     customView.frame = CGRectMake(0, 0, noticeLeftBarButtons.lastObject.maxX, 44);
     
     for (UIButton *button in noticeLeftBarButtons) {

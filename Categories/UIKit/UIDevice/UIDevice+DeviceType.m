@@ -10,7 +10,7 @@
 #import <sys/utsname.h>
 
 @implementation UIDevice (DeviceType)
-- (NSString *)model{
+- (NSString *)model {
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
