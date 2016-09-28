@@ -11,6 +11,7 @@
 
 #define TabbarItemNums 5.0
 @implementation UITabBar (badge)
+
 - (void)showBadgeOnItemIndex:(int)index count:(NSInteger)carCount {
     //移除之前的 badge
     [self removeBadgeOnItemIndex:index];

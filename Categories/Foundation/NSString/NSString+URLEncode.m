@@ -11,12 +11,7 @@
 @implementation NSString (URLEncode)
 
 - (NSString *)URLEncode {
-    NSString *URLString = self;
-    NSRange range = [URLString rangeOfString:@".com"];
-    if (range.length > 0) {
-        URLString = [self substringFromIndex:range.location+range.length];
-    }
-    return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(nil, (__bridge CFStringRef)URLString, nil, (__bridge CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingASCII));
+    return CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(nil, (__bridge CFStringRef)self, nil, (__bridge CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingASCII));
 }
 
 - (NSString *)URLDeCode {

@@ -11,9 +11,9 @@
 @interface NSString (base64)
 
 // base64解码
--(NSString *)stringFromBase64;
+- (NSString *)base64Encode;
 
 // base64加密
--(NSString *)base64Fromstring;
+- (NSString *)base64Decode;
 
 @end

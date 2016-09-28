@@ -23,6 +23,6 @@
 - (NSString *)intPAdate;
 
 // 时间转化
-- (NSTimeInterval) dateConverter;
+- (NSTimeInterval)dateConverter;
 
 @end

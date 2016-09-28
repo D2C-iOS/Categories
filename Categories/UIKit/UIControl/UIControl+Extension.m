@@ -9,6 +9,7 @@
 #import "UIControl+Extension.h"
 #import <objc/runtime.h>
 @implementation UIControl (Extension)
+
 static const char *UIControl_acceptEventInterval = "UIControl_acceptEventInterval";
 static const char *uxy_ignoreEventKey            = "uxy_ignoreEventKey";
 
@@ -32,7 +33,7 @@ static const char *uxy_ignoreEventKey            = "uxy_ignoreEventKey";
 
 #pragma mark - Get
 - (NSTimeInterval)uxy_acceptEventInterval {
-    return [objc_getAssociatedObject(self, UIControl_acceptEventInterval) doubleValue];
+    return [objc_getAssociatedObject(self, @selector(uxy_acceptEventInterval)) doubleValue];
 }
 -(NSNumber *)uxy_ignoreEvent {
     return objc_getAssociatedObject(self, uxy_ignoreEventKey);
@@ -40,7 +41,7 @@ static const char *uxy_ignoreEventKey            = "uxy_ignoreEventKey";
 
 #pragma mark - Set
 - (void)setUxy_acceptEventInterval:(NSTimeInterval)uxy_acceptEventInterval {
-    objc_setAssociatedObject(self, UIControl_acceptEventInterval, @(uxy_acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(uxy_acceptEventInterval), @(uxy_acceptEventInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 -(void)setUxy_ignoreEvent:(NSNumber *)uxy_ignoreEvent {
     objc_setAssociatedObject(self, uxy_ignoreEventKey, uxy_ignoreEvent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);

@@ -17,22 +17,16 @@
     return YES;
 }
 
--(BOOL)isEmpty {
+- (BOOL)isEmpty {
     if (!self) {
         return true;
-    } else {
-        NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-        NSString *trimedString = [self stringByTrimmingCharactersInSet:set];
-        
-        if ([trimedString length] == 0) {
-            return true;
-        } else {
-            return false;
-        }
     }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimedString = [self stringByTrimmingCharactersInSet:set];
+    return [trimedString length] == 0;
 }
 
--(BOOL)judgePassWordLegal {
+- (BOOL)judgePassWordLegal {
     BOOL result = false;
     if ([self length] >= 6){
         // 判断长度大于6位后再接着判断是否同时包含数字和字符
@@ -44,8 +38,7 @@
     return result;
 }
 
--(BOOL)walletPWDValid {
-    
+- (BOOL)walletPWDValid {
     BOOL result = false;
     if ([self length] >= 8) {
         // 判断长度大于6位后再接着判断是否同时包含数字和字符
@@ -58,9 +51,8 @@
 }
 
 
--(BOOL)isValidPhoneNumWithPredicate:(NSString *)predicate {
-    
-    if (predicate.length == 0 || predicate == nil) {
+- (BOOL)isValidPhoneNumWithPredicate:(NSString *)predicate {
+    if (predicate.length == 0 || !predicate) {
         return NO;
     }
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", predicate];
@@ -95,6 +87,7 @@
     __block BOOL returnValue =NO;
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         const unichar hs = [substring characterAtIndex:0];
+        
         if (0xd800) {
             if (0xd800 <= hs && hs <= 0xdbff) {
                 if (substring.length > 1) {
@@ -112,13 +105,17 @@
             }else {
                 if (0x2100 <= hs && hs <= 0x27ff) {
                     returnValue =YES;
-                }else if (0x2B05 <= hs && hs <= 0x2b07) {
+                }
+                else if (0x2B05 <= hs && hs <= 0x2b07) {
                     returnValue =YES;
-                }else if (0x2934 <= hs && hs <= 0x2935) {
+                }
+                else if (0x2934 <= hs && hs <= 0x2935) {
                     returnValue =YES;
-                }else if (0x3297 <= hs && hs <= 0x3299) {
+                }
+                else if (0x3297 <= hs && hs <= 0x3299) {
                     returnValue =YES;
-                }else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) {
+                }
+                else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) {
                     returnValue =YES;
                 }
             }

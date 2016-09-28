@@ -27,7 +27,7 @@
         self.badgeLabel.text = badgeValue;
         self.badgeLabel.hidden = NO;
     }
-    else if (self.badgeValue != nil) {
+    else if (self.badgeValue) {
         self.badgeLabel.hidden = YES;
     }
     else {

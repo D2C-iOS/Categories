@@ -11,13 +11,6 @@
 
 @implementation UIAlertView (Block)
 
-- (void)setClickedButtonBlock:(void (^)(void))clickedButtonBlock {
-    objc_setAssociatedObject(self, @selector(clickedButtonBlock), clickedButtonBlock, OBJC_ASSOCIATION_COPY);
-}
-- (void (^)(void))clickedButtonBlock {
-    return objc_getAssociatedObject(self, @selector(clickedButtonBlock));
-}
-
 - (void)setClickedButtonCallback:(void (^)(NSInteger))clickedButtonCallback; {
     objc_setAssociatedObject(self, @selector(clickedButtonCallback), clickedButtonCallback, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
@@ -26,14 +19,15 @@
     return objc_getAssociatedObject(self, @selector(clickedButtonCallback));
 }
 
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles ClickedButtonBlock:(void (^)(void))clickedButtonBlock {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles, nil];
-    alertView.delegate = alertView;
-    alertView.clickedButtonBlock = clickedButtonBlock;
-    [alertView show];
++ (instancetype)showAlertWithTitle:(NSString *)title message:(NSString *)message ClickedButtonBlock:(void (^)(void))clickedButtonBlock {
+    return [self alertWithTitle:title message:message cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] ClickedButtonCallback:^(NSInteger index) {
+        if (index == 1) {
+            clickedButtonBlock();
+        }
+    }];
 }
 
-+ (UIAlertView *)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles ClickedButtonCallback:(void (^)(NSInteger))ClickedButtonCallback {
++ (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles ClickedButtonCallback:(void (^)(NSInteger))ClickedButtonCallback {
     
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
     for (NSString *title in otherButtonTitles) {
@@ -46,13 +40,8 @@
 }
 
 
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (self.clickedButtonBlock != NULL) {
-        if (buttonIndex == 1) {
-            self.clickedButtonBlock();
-        }
-    }
-    self.clickedButtonCallback? self.clickedButtonCallback(buttonIndex) : NULL;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.clickedButtonCallback ? self.clickedButtonCallback(buttonIndex) : NULL;
 }
 
 @end

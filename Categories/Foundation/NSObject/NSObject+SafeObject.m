@@ -11,8 +11,7 @@
 @implementation NSObject (SafeObject)
 
 - (id)safeObjectIndex:(NSInteger)index {
-    
-    if (self != nil) {
+    if (self) {
         if ([self isKindOfClass:[NSArray class]] || [self isKindOfClass:[NSMutableArray class]]) {
             NSArray *object = (NSArray *)self;
             if ([object count] > index) {

@@ -31,4 +31,5 @@
  *  @param count 数量
  */
 -(void)setMessageCountWithCount:(NSNumber *)count;
+
 @end
