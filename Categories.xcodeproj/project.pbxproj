@@ -53,6 +53,7 @@
 		6E5F5FA81D9BAFB600B2D630 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5FA61D9BAFB600B2D630 /* UIImage+Color.m */; };
 		6E5F5FAB1D9BB20000B2D630 /* UIImage+Square.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E5F5FA91D9BB20000B2D630 /* UIImage+Square.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E5F5FAC1D9BB20000B2D630 /* UIImage+Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5FAA1D9BB20000B2D630 /* UIImage+Square.m */; };
+		6E5F5FAD1D9CC50300B2D630 /* UITabBar+badge.h in Headers */ = {isa = PBXBuildFile; fileRef = 562D3C2E1D9A882D002FD276 /* UITabBar+badge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2CCE1681D9A552700975DE9 /* NSObject+SwiizzleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE1641D9A552700975DE9 /* NSObject+SwiizzleMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2CCE1691D9A552700975DE9 /* NSObject+SwiizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CCE1651D9A552700975DE9 /* NSObject+SwiizzleMethod.m */; };
 		B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CCE17F1D9A67E700975DE9 /* NSString+MD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -532,6 +533,7 @@
 				6E5F5FA71D9BAFB600B2D630 /* UIImage+Color.h in Headers */,
 				B2FB64151D9BA87C00634042 /* NSString+XML.h in Headers */,
 				B2FB64111D9BA6B400634042 /* NSString+HTML.h in Headers */,
+				6E5F5FAD1D9CC50300B2D630 /* UITabBar+badge.h in Headers */,
 				6E5F5F4C1D9A62DF00B2D630 /* UIView+Capture.h in Headers */,
 				B2CCE1851D9A67E700975DE9 /* NSString+MD5.h in Headers */,
 				6E5F5F5A1D9A6FFD00B2D630 /* Foundation_Categories.h in Headers */,
