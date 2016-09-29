@@ -13,28 +13,9 @@
 
 @implementation UIButton (BadgeValue)
 
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [self swizzleMethod:@selector(layoutSubviews) swizzledSelector:@selector(aop_layoutSubviews)];
-    });
-}
-
-- (void)aop_layoutSubviews {
-    [self aop_layoutSubviews];
-    if ([self.badgeValue isValid]) {
-        CGFloat width = [self.badgeValue widthWithFont:self.badgeLabel.font height:14];
-        if (width + 7 > 14) {
-            self.badgeLabel.frame = CGRectMake(self.frame.size.width - 10, -8, 14, 14);
-        }else{
-            self.badgeLabel.frame = CGRectMake(self.frame.size.width - 10, -8, width + 7, 14);
-        }
-    }
-}
-
 #pragma mark - Get
 - (NSString *)badgeValue {
-    return objc_getAssociatedObject(self, @selector(badgeValue));
+    return self.badgeLabel.text;
 }
 
 - (UILabel *)badgeLabel {
@@ -56,17 +37,48 @@
 #pragma mark - Set
 - (void)setBadgeValue:(NSString *)badgeValue {
     if ([badgeValue isValid]) {
+        CGFloat width = [self.badgeValue widthWithFont:self.badgeLabel.font height:14];
+        CGFloat maxWidth = 0;
+        if (width + 7 > 14) {
+            maxWidth = width + 7;
+        }else {
+            maxWidth = width;
+        }
         self.badgeLabel.text = badgeValue;
         self.badgeLabel.hidden = NO;
-    }
-    else if (self.badgeValue) {
-        self.badgeLabel.hidden = YES;
-    }
-    else {
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.badgeLabel
+                                                         attribute:NSLayoutAttributeWidth
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeWidth
+                                                        multiplier:1
+                                                          constant:maxWidth]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.badgeLabel
+                                                         attribute:NSLayoutAttributeHeight
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:nil
+                                                         attribute:NSLayoutAttributeHeight
+                                                        multiplier:0
+                                                          constant:14]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.badgeLabel
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeRight
+                                                        multiplier:1
+                                                          constant:4]];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self.badgeLabel
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:self
+                                                         attribute:NSLayoutAttributeTop
+                                                        multiplier:1
+                                                          constant:8]];
         
     }
-    [self setNeedsLayout];
-    objc_setAssociatedObject(self, @selector(badgeValue), badgeValue, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    else {
+        self.badgeLabel.hidden = NO;
+    }
 }
 
 @end
