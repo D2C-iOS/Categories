@@ -12,13 +12,13 @@
 
 - (CGFloat)widthWithFont:(UIFont *)font height:(CGFloat)height {
     CGSize maxSize = CGSizeMake(9999, height);
-    return [self sizeWithFont:font size:maxSize].height;
+    return [self sizeWithFont:font size:maxSize].width;
 }
 
 
 - (CGFloat)heightWithFont:(UIFont *)font Width:(CGFloat)width {
     CGSize maxSize = CGSizeMake(width, 9999);
-    return [self sizeWithFont:font size:maxSize].width;
+    return [self sizeWithFont:font size:maxSize].height;
 }
 
 
