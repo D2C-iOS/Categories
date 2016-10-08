@@ -28,7 +28,7 @@
 
 - (BOOL)judgePassWordLegal {
     BOOL result = false;
-    if ([self length] >= 6){
+    if ([self length] >= 8 && [self length] <= 20){
         // 判断长度大于6位后再接着判断是否同时包含数字和字符
         //        NSString * regex = @"(?!^\\d+$)(?!^[a-zA-Z]+$)[a-zA-Z0-9]{8,20}";//@"^(?![0-9]+$)(?![a-zA-Z]+$).{8,20}$"; //
         //        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
