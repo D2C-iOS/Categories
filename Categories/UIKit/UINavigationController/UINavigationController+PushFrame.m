@@ -52,14 +52,14 @@
 
 #pragma mark - Get
 - (UIViewController *)currentViewController {
-    return self.viewControllers[self.viewControllers.count];
+    return self.viewControllers[self.viewControllers.count - 1];
 }
 
 - (UIViewController *)previouViewController {
     if (self.viewControllers.count < 2) {
         return NULL;
     }
-    return self.viewControllers[self.viewControllers.count-2];
+    return self.viewControllers[self.viewControllers.count - 2];
 }
 
 - (UIViewController *)firstViewController {
