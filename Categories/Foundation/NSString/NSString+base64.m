@@ -11,16 +11,15 @@
 @implementation NSString (base64)
 
 - (NSString *)base64Encode {
-    NSData *dataFromBase64String = [[NSData alloc] initWithBase64EncodedString:self options:0];
-    NSString *base64Decoded = [[NSString alloc] initWithData:dataFromBase64String encoding:NSUTF8StringEncoding];
-    return base64Decoded;
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *base64Encode = [data base64EncodedStringWithOptions:0];
+    return base64Encode;
 }
 
 - (NSString *)base64Decode {
-    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *base64Encoded = [data base64EncodedStringWithOptions:0];
-    return base64Encoded;
+    NSData *dataFromBase64String = [[NSData alloc] initWithBase64EncodedString:self options:0];
+    NSString *base64Decode = [[NSString alloc] initWithData:dataFromBase64String encoding:NSUTF8StringEncoding];
+    return base64Decode;
 }
-
 
 @end

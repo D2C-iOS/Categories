@@ -10,10 +10,10 @@
 
 @interface NSString (base64)
 
-// base64解码
+// base64加密
 - (NSString *)base64Encode;
 
-// base64加密
+// base64解码
 - (NSString *)base64Decode;
 
 @end
