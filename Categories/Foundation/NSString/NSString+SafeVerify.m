@@ -133,7 +133,7 @@
 }
 
 - (BOOL)checkPayChar {
-    NSString *regex = @"[a-z A-Z 0-9 , . + - / ! @ # $ % ^ & * ( ) _ = ? \u4e00-\u9fa5 ， 。 ？]+";
+    NSString *regex = @"[a-z A-Z 0-9 , . + - — / ! @ # $ % ^ & * ( ) _ = ? \u4e00-\u9fa5 ， 。 ？]+";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [pred evaluateWithObject:self];
 }
